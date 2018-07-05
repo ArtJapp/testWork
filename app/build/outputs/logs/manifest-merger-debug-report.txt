@@ -1,0 +1,135 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d0e59ef6fa0a53d9710a1a41ccae0b2d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/legion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/139158a7c7442ee5dcf73ca2102d5510/AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/legion/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/6278c46312a83762b16f5160d739e623/AndroidManifest.xml:2:1-7:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bfc31ffa1605bcfe7c1db3fa3684e020/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/320b7524d6ee782595ba2c99b352cbe2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1170a30cbd5e461b035a805ac95785b2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/999888875f5fc298999f349ad3572834/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45322bb82e4a723c57e114d850c42094/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e133563eb3e4fc44c3f9e5786b4efb38/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/011541516f7e979cbac8c70570ce6b4b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/93ac5bfbd4084d5ee2dfc0a19b772bc5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ef76e3f2bacab69b1193638fd4c4287f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b9d49a3d88e4c9faaf4b201a45501ea/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/709e620f5a734009bfa87f5897ded6ae/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5182ed6a3d2c76eadb5b7586d3a1f95a/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:6:22-76
+application
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:8:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/legion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/139158a7c7442ee5dcf73ca2102d5510/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/legion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/139158a7c7442ee5dcf73ca2102d5510/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:7:5-12:19
+	android:supportsRtl
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:15:9-40
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:14:9-28
+activity#mrth.legion.joprst.MainActivity
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:16:9-22:20
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:16:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml:20:27-74
+uses-sdk
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d0e59ef6fa0a53d9710a1a41ccae0b2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d0e59ef6fa0a53d9710a1a41ccae0b2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/legion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/139158a7c7442ee5dcf73ca2102d5510/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/legion/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/139158a7c7442ee5dcf73ca2102d5510/AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/legion/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/6278c46312a83762b16f5160d739e623/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/legion/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/6278c46312a83762b16f5160d739e623/AndroidManifest.xml:5:5-43
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bfc31ffa1605bcfe7c1db3fa3684e020/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bfc31ffa1605bcfe7c1db3fa3684e020/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/320b7524d6ee782595ba2c99b352cbe2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/320b7524d6ee782595ba2c99b352cbe2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1170a30cbd5e461b035a805ac95785b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1170a30cbd5e461b035a805ac95785b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/999888875f5fc298999f349ad3572834/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/999888875f5fc298999f349ad3572834/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45322bb82e4a723c57e114d850c42094/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45322bb82e4a723c57e114d850c42094/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e133563eb3e4fc44c3f9e5786b4efb38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e133563eb3e4fc44c3f9e5786b4efb38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/011541516f7e979cbac8c70570ce6b4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/011541516f7e979cbac8c70570ce6b4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/93ac5bfbd4084d5ee2dfc0a19b772bc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/legion/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/93ac5bfbd4084d5ee2dfc0a19b772bc5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ef76e3f2bacab69b1193638fd4c4287f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ef76e3f2bacab69b1193638fd4c4287f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b9d49a3d88e4c9faaf4b201a45501ea/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b9d49a3d88e4c9faaf4b201a45501ea/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/709e620f5a734009bfa87f5897ded6ae/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/709e620f5a734009bfa87f5897ded6ae/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5182ed6a3d2c76eadb5b7586d3a1f95a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/legion/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5182ed6a3d2c76eadb5b7586d3a1f95a/AndroidManifest.xml:20:5-44
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		ADDED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+		INJECTED from /home/legion/Moxy-master/Moxy-master/testWork/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/legion/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/bd8801c92c36c4dbe85f7069c13a3ed8/AndroidManifest.xml:9:13-64

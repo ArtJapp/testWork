@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Google Custom Search Test 1</string>
+    <string name="btnSearchSubmit">Search</string>
+    <string name="NotFound">Not Found</string>
+</resources>
