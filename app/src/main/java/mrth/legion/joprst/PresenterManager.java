@@ -1,3 +1,4 @@
+/*
 package mrth.legion.joprst;
 
 import android.os.Bundle;
@@ -46,4 +47,4 @@ public class PresenterManager {
         presenters.put(presenterId, presenter);
         outState.putLong(SIS_KEY_PRESENTER_ID, presenterId);
     }
-}
+}*/

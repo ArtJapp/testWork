@@ -1,3 +1,4 @@
+/*
 package mrth.legion.joprst;
 
 
@@ -47,3 +48,4 @@ public abstract class MvpRecyclerAdapter<M, P extends BasePresenter, VH extends 
 
     protected abstract M getItem(int position);
 }
+*/

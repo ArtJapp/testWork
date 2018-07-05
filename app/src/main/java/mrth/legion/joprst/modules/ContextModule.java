@@ -2,6 +2,8 @@ package mrth.legion.joprst.modules;
 
 import android.content.Context;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -15,6 +17,7 @@ public class ContextModule {
     }
 
     @Provides
+    @Singleton
     public Context context() {
         return context.getApplicationContext();
     }

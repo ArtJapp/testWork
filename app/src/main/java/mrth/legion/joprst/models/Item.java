@@ -172,5 +172,4 @@ public class Item {
     public void setImage(Image_ image) {
         this.image = image;
     }
-
 }

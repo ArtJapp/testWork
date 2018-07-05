@@ -3,6 +3,8 @@ package mrth.legion.joprst.modules;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import mrth.legion.joprst.Api;
@@ -14,11 +16,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class GoogleSearchModule {
 
     @Provides
+    @Singleton
     public Api googleCuSearchAPI(Retrofit retrofit) {
         return  retrofit.create(Api.class);
     }
 
     @Provides
+    @Singleton
     public Retrofit retrofit(OkHttpClient okHttpClient, GsonConverterFactory gsonConverterFactory, Gson gson) {
         return new Retrofit.Builder()
                 .client(okHttpClient)
@@ -28,12 +32,14 @@ public class GoogleSearchModule {
     }
 
     @Provides
+    @Singleton
     public Gson gson() {
         GsonBuilder gsonBuilder = new GsonBuilder();
         return gsonBuilder.create();
     }
 
     @Provides
+    @Singleton
     public GsonConverterFactory gsonConverterFactory(Gson gson) {
         return GsonConverterFactory.create(gson);
     }

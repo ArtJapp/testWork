@@ -10,16 +10,21 @@ import mrth.legion.joprst.modules.ContextModule;
 public class App extends Application{
     private static Api googleCuSearchAPI;
     private static Picasso picassoDownloader;
+
+    private static GoogleSearchComponent appComponent;
     @Override
     public void onCreate() {
         super.onCreate();
 
-        GoogleSearchComponent daggerGoogleSearchComponent = DaggerGoogleSearchComponent.builder()
+        appComponent = DaggerGoogleSearchComponent.builder()
                 .contextModule(new ContextModule(this))
                 .build();
 
-        googleCuSearchAPI = daggerGoogleSearchComponent.getGoogleSearchService();
-        picassoDownloader = daggerGoogleSearchComponent.getPicasso();
+
+
+        googleCuSearchAPI = appComponent.getGoogleSearchService();
+        picassoDownloader = appComponent.getPicasso();
+
     }
 
     public static Api getApi() {
@@ -29,5 +34,13 @@ public class App extends Application{
     public static Picasso getPicasso() {
         Log.d("Loggy", "start getting component");
         return picassoDownloader;
+    }
+
+    public static GoogleSearchComponent getAppComponent() {
+        return appComponent;
+    }
+
+    public GoogleSearchComponent provideGoogleSearchComponent() {
+        return new GoogleSearchComponent();
     }
 }

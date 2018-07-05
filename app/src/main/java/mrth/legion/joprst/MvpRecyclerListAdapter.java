@@ -1,3 +1,4 @@
+/*
 package mrth.legion.joprst;
 
 import java.util.ArrayList;
@@ -103,3 +104,4 @@ public abstract class MvpRecyclerListAdapter<M, P extends BasePresenter, VH exte
         return models.get(position);
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package mrth.legion.joprst.views;
 
 import android.util.Log;
@@ -6,22 +7,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.PresenterType;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mrth.legion.joprst.App;
 import mrth.legion.joprst.R;
 import mrth.legion.joprst.models.Item;
-import mrth.legion.joprst.presenters.SearchPresenter;
+import mrth.legion.joprst.presenters.ResultPresenter;
 
-public class ResultViewHolder extends MvpViewHolder<SearchPresenter> implements ResultView {
+public class ResultViewHolder extends MvpViewHolder<ResultPresenter> implements ResultView {
     @BindView(R.id.textResult) TextView resultText;
     @BindView(R.id.imageResult) ImageView resultImage;
-    @InjectPresenter
-    SearchPresenter mSearchPresenter;
+    @InjectPresenter(type = PresenterType.WEAK, tag = ResultPresenter.TAG)
+    ResultPresenter mSearchPresenter;
 
-    SearchPresenter provideSearchPresenter() {
-        return new SearchPresenter();
+    @ProvidePresenter
+    ResultPresenter provideSearchPresenter() {
+        return new ResultPresenter();
     }
 
     public ResultViewHolder(View itemView) {
@@ -60,3 +64,4 @@ public class ResultViewHolder extends MvpViewHolder<SearchPresenter> implements 
         App.getPicasso().load(pictureUrl).into(resultImage);
     }
 }
+*/

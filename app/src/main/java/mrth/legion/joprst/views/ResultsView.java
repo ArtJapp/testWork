@@ -8,8 +8,8 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 import java.util.List;
 
 import mrth.legion.joprst.models.Item;
-@StateStrategyType(AddToEndSingleStrategy.class)
-public interface MainView extends MvpView {
+
+public interface ResultsView extends MvpView {
     @StateStrategyType(AddToEndSingleStrategy.class)
     void showItems(List<Item> results);
     @StateStrategyType(AddToEndSingleStrategy.class)

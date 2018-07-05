@@ -2,12 +2,21 @@ package mrth.legion.joprst;
 
 import com.squareup.picasso.Picasso;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
+import mrth.legion.joprst.modules.ContextModule;
 import mrth.legion.joprst.modules.GoogleSearchModule;
 import mrth.legion.joprst.modules.PicassoModule;
+import mrth.legion.joprst.presenters.ResultPresenter;
+import mrth.legion.joprst.presenters.ResultsPresenter;
 
-@Component(modules = {GoogleSearchModule.class, PicassoModule.class})
+@Singleton
+@Component(modules = {GoogleSearchModule.class, PicassoModule.class, ContextModule.class})
 interface GoogleSearchComponent {
     Api getGoogleSearchService();
     Picasso getPicasso();
+
+    void inject(ResultPresenter presenter);
+    void inject(ResultsPresenter presenter);
 }

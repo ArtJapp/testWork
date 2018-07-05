@@ -1,31 +1,22 @@
-/*
 package mrth.legion.joprst.presenters;
 
 import android.util.Log;
 
 import com.arellomobile.mvp.InjectViewState;
-import com.arellomobile.mvp.MvpPresenter;
 
-import org.reactivestreams.Subscription;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.internal.Utils;
 import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
-import mrth.legion.joprst.Api;
 import mrth.legion.joprst.App;
 import mrth.legion.joprst.models.Item;
 import mrth.legion.joprst.models.Result;
 import mrth.legion.joprst.views.MainView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class MainPresenter extends BasePresenter<MainView> {
+@InjectViewState
+public class ResultsPresenter extends BasePresenter<MainView> {
 
     private static final String KEY = "AIzaSyBhyyGlpv18LFbwNKKrYh15Sl3BKQNw0Xo";
     private static final String CX = "016576717547248085790:zpizgomjgu8";
@@ -33,28 +24,29 @@ public class MainPresenter extends BasePresenter<MainView> {
     @Inject
     GoogleService mService;
 
-    public MainPresenter() {
-        Google
+    
+    public ResultsPresenter() {
+        App.getAppComponent().inject(this);
     }
 
-    protected void updateView() {
+   /* protected void updateView() {
         if (model.size() == 0) {
             getViewState().showEmpty();
         } else {
             Log.d("Loggy", "start showing");
-            view().showResults(model);
+            getViewState().showItems(model);
             Log.d("Loggy", "finish updating");
         }
     }
 
-    public void bindView(MainView view,String userQuery) {
+    public void bindView(MainView view, String userQuery) {
         Log.d("Loggy", "start binding view");
         super.bindView(view);
         if (userQuery != "") {
             loadData(userQuery, false);
         }
         Log.d("Loggy", "finish getting component");
-    }
+    }*/
 
     private void loadData(String requestUser,  boolean isPageLoading) {
         Log.d("Loggy", "start getting data");
@@ -121,4 +113,3 @@ public class MainPresenter extends BasePresenter<MainView> {
 
 
 }
-*/
