@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
         PresenterManager.getInstance().savePresenter(presenter, outState);
     }
 
+    @StateStrategyType(AddToEndSingleStrategy.class)
     @Override
     public void showResults(List<Item> results) {
         adapter.clearAndAddAll(results);

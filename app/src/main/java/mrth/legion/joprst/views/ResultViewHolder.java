@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.arellomobile.mvp.presenter.InjectPresenter;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mrth.legion.joprst.App;
@@ -15,6 +17,13 @@ import mrth.legion.joprst.presenters.SearchPresenter;
 public class ResultViewHolder extends MvpViewHolder<SearchPresenter> implements ResultView {
     @BindView(R.id.textResult) TextView resultText;
     @BindView(R.id.imageResult) ImageView resultImage;
+    @InjectPresenter
+    SearchPresenter mSearchPresenter;
+
+    SearchPresenter provideSearchPresenter() {
+        return new SearchPresenter();
+    }
+
     public ResultViewHolder(View itemView) {
         super(itemView);
         Log.d("Loggy", "Start creating viewholder");

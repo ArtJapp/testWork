@@ -2,6 +2,8 @@ package mrth.legion.joprst.presenters;
 
 import android.util.Log;
 
+import com.arellomobile.mvp.InjectViewState;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+@InjectViewState
 public class MainPresenter extends BasePresenter<List<Item>, MainView> {
 
     private static final String KEY = "AIzaSyBhyyGlpv18LFbwNKKrYh15Sl3BKQNw0Xo";
