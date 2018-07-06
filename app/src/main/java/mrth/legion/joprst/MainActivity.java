@@ -45,15 +45,9 @@ public class MainActivity extends MvpAppCompatActivity implements ResultsView {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-
-
-       // adapter = new ResultsAdapter(getMvpDelegate());
         adaptered = new ResViewAdapter(getApplicationContext());
         adaptered = new ResViewAdapter(getApplicationContext());
-//        presenter.loadResults("cat");
-     //   mRepositoriesListView.setAdapter(adapter);
-      //  LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-  //      recyclerView.setLayoutManager(layoutManager);
+
         RecyclerView v = findViewById(R.id.resultList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         v.setAdapter(adaptered);
@@ -64,25 +58,21 @@ public class MainActivity extends MvpAppCompatActivity implements ResultsView {
     @Override
     protected void onResume() {
         super.onResume();
-  //      presenter.bindView(this, "");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
- //       presenter.unbindView();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-   //     PresenterManager.getInstance().savePresenter(presenter, outState);
     }
 
     @Override
     public void showItems(List<Item> results) {
-      //  mRepositoriesListView.setEmptyView(mNoRepositoriesTextView);
-        //adapter.setResults(results);
+
         adaptered.setResults(results);
         adaptered.notifyDataSetChanged();
     }
@@ -94,7 +84,6 @@ public class MainActivity extends MvpAppCompatActivity implements ResultsView {
 
     @Override
     public void addItems(List<Item> items) {
-      //  adapter.setResults(items);
         adaptered.setResults(items);
     }
 

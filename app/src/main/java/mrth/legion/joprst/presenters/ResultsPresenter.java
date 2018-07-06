@@ -29,7 +29,6 @@ public class ResultsPresenter extends BasePresenter<ResultsView> {
     @Inject
     GoogleService mService;
 
-
     public ResultsPresenter() {
         GoogleSearchComponent g =  App.getAppComponent();
         //g.inject(this);
@@ -37,7 +36,8 @@ public class ResultsPresenter extends BasePresenter<ResultsView> {
 
 
    public void loadResults(String uRequest) {
-       loadData(uRequest, false);
+       uRequest = uRequest.replaceAll(" ", "+");
+        loadData(uRequest, false);
    }
 
     private void loadData(String requestUser,  boolean isPageLoading) {
@@ -58,7 +58,7 @@ public class ResultsPresenter extends BasePresenter<ResultsView> {
                 });
 */
         final Observable<Result> observable = //mService.getQuery(requestUser);
-            App.getApi().getData("cat", CX, KEY,"image", "large");
+            App.getApi().getData(requestUser, CX, KEY,"image", "large");
         Disposable subscription = observable
                 .compose(mrth.legion.joprst.common.Utils.applySchedulers())
                 .subscribe(items -> {

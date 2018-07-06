@@ -19,5 +19,4 @@ public interface GoogleSearchComponent {
     Picasso getPicasso();
 
     void inject(ResultPresenter presenter);
-//    void inject(ResultsPresenter presenter);
 }

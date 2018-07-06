@@ -77,10 +77,10 @@ public class ResViewAdapter extends RecyclerView.Adapter<ResViewAdapter.ResViewH
             App.getPicasso().load(item.getLink()).into(imageView);
             DisplayMetrics displaymetrics = new DisplayMetrics();
             ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-            //if you need three fix imageview in width
-            int devicewidth = displaymetrics.widthPixels / 3;
-            linearLayout.getLayoutParams().width = devicewidth;
-            linearLayout.getLayoutParams().height = devicewidth;
-        }
+
+            System.out.println("The width is " + linearLayout.getLayoutParams().width);
+            System.out.println("The new height is " + (Integer.parseInt(item.getImage().getThumbnailHeight()) * 1.0 * linearLayout.getLayoutParams().width) / Integer.parseInt(item.getImage().getThumbnailWidth()));
+            itemView.getLayoutParams().height = Integer.parseInt(item.getImage().getThumbnailHeight()) * linearLayout.getLayoutParams().width / Integer.parseInt(item.getImage().getThumbnailWidth());
+    }
     }
 }
