@@ -5,21 +5,26 @@ import android.util.Log;
 
 import com.squareup.picasso.Picasso;
 
+import dagger.Provides;
+import mrth.legion.joprst.modules.AppModule;
 import mrth.legion.joprst.modules.ContextModule;
+import mrth.legion.joprst.presenters.ResultPresenter;
+import mrth.legion.joprst.presenters.ResultsPresenter;
 
 public class App extends Application{
     private static Api googleCuSearchAPI;
     private static Picasso picassoDownloader;
 
     private static GoogleSearchComponent appComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
         appComponent = DaggerGoogleSearchComponent.builder()
+              //  .applicationModule(new AppModule(this))
                 .contextModule(new ContextModule(this))
                 .build();
-
 
 
         googleCuSearchAPI = appComponent.getGoogleSearchService();
@@ -40,7 +45,5 @@ public class App extends Application{
         return appComponent;
     }
 
-    public GoogleSearchComponent provideGoogleSearchComponent() {
-        return new GoogleSearchComponent();
-    }
+
 }

@@ -2,6 +2,7 @@ package mrth.legion.joprst.views;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,24 +30,26 @@ public class DetailsFragment extends MvpAppCompatFragment implements ResultView 
     @BindView(R.id.textResult)
     TextView textView;
 
-    @BindView(R.id.imageResult)
-    ImageView imageView;
+    /*@BindView(R.id.imageResult)
+    ImageView imageView;*/
 
     @ProvidePresenter
-    ResultPresenter provideRepositoryPresenter() {
+    ResultPresenter provideResultPresenter() {
         item = (Item) getArguments().get(ARGS_RESULT);
-
+        System.out.println("Provide ResultPresenter");
         return new ResultPresenter(item);
     }
 
     @Override
     public void setResultItemTitle(String name) {
+        Log.d("Not missed text", "Hello " + name);
         textView.setText(name);
     }
 
     @Override
     public void setResultItemImage(String pictureURL) {
-        App.getPicasso().load(pictureURL).into(imageView);
+ //       App.getPicasso().load(pictureURL).into(imageView);
+        Log.d("Missed picture", "Hello, " + pictureURL);
     }
 
 

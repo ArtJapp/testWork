@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,28 +18,26 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mrth.legion.joprst.models.Item;
-import mrth.legion.joprst.views.FrameMyLayout;
-import mrth.legion.joprst.views.MainView;
+import mrth.legion.joprst.presenters.ResultsPresenter;
+import mrth.legion.joprst.views.ResultsView;
 
-public class MainActivity extends MvpAppCompatActivity implements MainView, View.OnClickListener {
+public class MainActivity extends MvpAppCompatActivity implements ResultsView {
 
-    private ResultAdapter adapter;
-   // @InjectPresenter
-   // MainPresenter presenter;
+   // private ResultsAdapter adapter;
+    private ResViewAdapter adaptered;
+    @InjectPresenter
+    ResultsPresenter presenter;
 
     @BindView(R.id.btnSearch) Button btnSubmit;
     @BindView(R.id.etSearchField) EditText etSearchField;
-    @BindView(R.id.activity_home_layout)
-    FrameMyLayout frameMyLayout;
-    @BindView(R.id.activity_home_list_view_repositories)
-    ListView mRepositoriesListView;
-    @BindView(R.id.activity_home_text_view_no_repositories)
-    TextView mNoRepositoriesTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,26 +45,20 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, View
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        if (savedInstanceState == null) {
-    //        presenter = new MainPresenter();
-        } else {
-   //        presenter = PresenterManager.getInstance().restorePresenter(savedInstanceState);
-        }
 
-        adapter = new ResultAdapter(getMvpDelegate());
-        frameMyLayout.setListViewChild(mRepositoriesListView);
-      //  frameMyLayout.setOnRefreshListener(() -> presenter.);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+       // adapter = new ResultsAdapter(getMvpDelegate());
+        adaptered = new ResViewAdapter(getApplicationContext());
+        adaptered = new ResViewAdapter(getApplicationContext());
+//        presenter.loadResults("cat");
+     //   mRepositoriesListView.setAdapter(adapter);
+      //  LinearLayoutManager layoutManager = new LinearLayoutManager(this);
   //      recyclerView.setLayoutManager(layoutManager);
-
-        btnSubmit.setOnClickListener(this);
-    }
-
-    public void onClick(View v) {
-        if (v.getId() == R.id.btnSearch) {
-   //         presenter.bindView(this, etSearchField.getText().toString());
-        }
+        RecyclerView v = findViewById(R.id.resultList);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        v.setAdapter(adaptered);
+        v.setLayoutManager(layoutManager);
+        btnSubmit.setOnClickListener(v1 -> presenter.loadResults(etSearchField.getText().toString()));
     }
 
     @Override
@@ -86,15 +79,12 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, View
    //     PresenterManager.getInstance().savePresenter(presenter, outState);
     }
 
-    @StateStrategyType(AddToEndSingleStrategy.class)
-
-    public void showResults(List<Item> results) {
- //       adapter.clearAndAddAll(results);
-    }
-
     @Override
     public void showItems(List<Item> results) {
-
+      //  mRepositoriesListView.setEmptyView(mNoRepositoriesTextView);
+        //adapter.setResults(results);
+        adaptered.setResults(results);
+        adaptered.notifyDataSetChanged();
     }
 
     @Override
@@ -104,7 +94,8 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, View
 
     @Override
     public void addItems(List<Item> items) {
-
+      //  adapter.setResults(items);
+        adaptered.setResults(items);
     }
 
     @Override

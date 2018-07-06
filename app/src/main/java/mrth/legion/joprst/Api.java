@@ -1,6 +1,8 @@
 package mrth.legion.joprst;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
 import mrth.legion.joprst.models.Result;
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -5,8 +5,8 @@ import android.support.annotation.NonNull;
 import com.arellomobile.mvp.MvpPresenter;
 import com.arellomobile.mvp.MvpView;
 
-import io.reactivex.disposables.Disposable;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 
 public class BasePresenter<View extends MvpView> extends MvpPresenter<View> {

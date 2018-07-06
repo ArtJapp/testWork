@@ -10,6 +10,7 @@ import dagger.Provides;
 import mrth.legion.joprst.Api;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module(includes = OkHttpClientModule.class)
@@ -28,6 +29,7 @@ public class GoogleSearchModule {
                 .client(okHttpClient)
                 .baseUrl("https://www.googleapis.com")
                 .addConverterFactory(gsonConverterFactory)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 

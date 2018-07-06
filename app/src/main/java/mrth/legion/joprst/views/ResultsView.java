@@ -9,6 +9,8 @@ import java.util.List;
 
 import mrth.legion.joprst.models.Item;
 
+
+@StateStrategyType(AddToEndSingleStrategy.class)
 public interface ResultsView extends MvpView {
     @StateStrategyType(AddToEndSingleStrategy.class)
     void showItems(List<Item> results);

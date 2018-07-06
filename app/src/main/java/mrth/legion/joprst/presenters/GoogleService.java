@@ -1,7 +1,13 @@
 package mrth.legion.joprst.presenters;
 
 
+import android.util.Log;
+
+import javax.inject.Inject;
+
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
 import mrth.legion.joprst.Api;
 import mrth.legion.joprst.models.Item;
 import mrth.legion.joprst.models.Result;
@@ -15,8 +21,9 @@ public class GoogleService {
         mApi = api;
     }
 
-    public Observable<Result> getQuery(String zapros) {
-        return mApi.getData(zapros, CX, KEY, "image", "medium");
 
+    public Observable<Result> getQuery(String zapros) {
+        Log.d("Pis", "Start geting data into mApi");
+        return mApi.getData(zapros, CX, KEY, "image", "medium");
     }
 }

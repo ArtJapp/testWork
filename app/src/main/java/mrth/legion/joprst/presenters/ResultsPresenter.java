@@ -8,15 +8,20 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import mrth.legion.joprst.App;
+import mrth.legion.joprst.GoogleSearchComponent;
+import mrth.legion.joprst.common.Utils;
 import mrth.legion.joprst.models.Item;
 import mrth.legion.joprst.models.Result;
-import mrth.legion.joprst.views.MainView;
+import mrth.legion.joprst.views.ResultsView;
 
 @InjectViewState
-public class ResultsPresenter extends BasePresenter<MainView> {
+public class ResultsPresenter extends BasePresenter<ResultsView> {
+
+    public static final String TAG = "ResultsPresenter";
 
     private static final String KEY = "AIzaSyBhyyGlpv18LFbwNKKrYh15Sl3BKQNw0Xo";
     private static final String CX = "016576717547248085790:zpizgomjgu8";
@@ -24,42 +29,47 @@ public class ResultsPresenter extends BasePresenter<MainView> {
     @Inject
     GoogleService mService;
 
-    
+
     public ResultsPresenter() {
-        App.getAppComponent().inject(this);
+        GoogleSearchComponent g =  App.getAppComponent();
+        //g.inject(this);
     }
 
-   /* protected void updateView() {
-        if (model.size() == 0) {
-            getViewState().showEmpty();
-        } else {
-            Log.d("Loggy", "start showing");
-            getViewState().showItems(model);
-            Log.d("Loggy", "finish updating");
-        }
-    }
 
-    public void bindView(MainView view, String userQuery) {
-        Log.d("Loggy", "start binding view");
-        super.bindView(view);
-        if (userQuery != "") {
-            loadData(userQuery, false);
-        }
-        Log.d("Loggy", "finish getting component");
-    }*/
+   public void loadResults(String uRequest) {
+       loadData(uRequest, false);
+   }
 
     private void loadData(String requestUser,  boolean isPageLoading) {
         Log.d("Loggy", "start getting data");
+        Log.d("Pis", "user request is " + requestUser);
 
-        final Observable<Result> observable = mService.getQuery(requestUser);
+        Log.d("Pis", "Start subscription");
 
+        /*Subscription subscription = observable
+                .compose(Utils.applySchedulers())
+                .subscribe(repositories -> {
+                    Log.d("Pis", "Success loading");
+                    onLoadingSuccess(isPageLoading, repositories.getItems());
+                }, error -> {
+                    Log.d("Pis", "Failed loading");
+                    error.printStackTrace();
+                    onLoagingFailed(isPageLoading, error);
+                });
+*/
+        final Observable<Result> observable = //mService.getQuery(requestUser);
+            App.getApi().getData("cat", CX, KEY,"image", "large");
         Disposable subscription = observable
                 .compose(mrth.legion.joprst.common.Utils.applySchedulers())
                 .subscribe(items -> {
+                    Log.d("Pis", "Success loading");
                     onLoadingSuccess(isPageLoading, items.getItems());
                 }, error -> {
+                    Log.d("Pis", "Failed loading");
+                    error.printStackTrace();
                     onLoagingFailed(isPageLoading, error);
                 });
+
 
         unsubscribeOnDestroy(subscription);
 
@@ -102,8 +112,17 @@ public class ResultsPresenter extends BasePresenter<MainView> {
     private void onLoadingSuccess( boolean isPageLoading, List<Item> items) {
         if (isPageLoading) {
             getViewState().addItems(items);
+
+            System.out.println("Easy Beasy");
+            for (Item x : items) {
+                System.out.println("New item " + x.getTitle());
+            }
         } else {
             getViewState().showItems(items);
+            System.out.println("Easy Beasy");
+            for (Item x : items) {
+                System.out.println("New item " + x.getTitle());
+            }
         }
     }
     private void onLoagingFailed( boolean isPageLoading, Throwable error) {
